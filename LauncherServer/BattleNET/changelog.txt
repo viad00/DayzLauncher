@@ -1,0 +1,71 @@
+v1.3.3
+ * Improved command queuing system (Fixes #37)
+
+v1.3.2
+ * Fixed an issue with banlists (Thank you DomiStyle)
+ * Added "admins" command, which returns all connected RCon clients (Thank you maca134)
+
+v1.3.1
+ * Fixed an issue where the (first) command would be sent twice
+ * Fixed an issue where the library would lose connection after a long time, depending on server load (Thanks to EPM Cortez for finding the issue)
+
+v1.3
+ * Client now has DNS support
+ * BattlEyeLoginCredentials.Host changed from string to IPAddress
+ * Increased timeout check sleep a bit (1 second)
+ * Increased time before a packet gets resend (2 seconds)
+ * Proper UTF8 support
+ * The usual bugfixes and cleanups
+
+v1.2.1
+ * Increased max socket receive buffer (fixes long ban lists)
+
+v1.2
+ * Removed system messages (Connected, Disconnected, etc) from library
+ * Changed ReconnectOnPacketLoss and IsConnected to properties
+ * New connect event (success, invalid login, host unreachable)
+ * SendCommandPacket() now returns an identifier which can be used in message filtering
+ * Renamed SendCommandPacket() to SendCommand(), kinda...
+ * Bugfixes and cleanups
+
+v1.1
+ * Different method to construct packets
+ * Some fixes and cleanups
+ * Did licensing the right way
+
+v1.0.2
+ * Fixed predefined commands, they now work actually. :)
+
+v1.0.1
+ * Fixed a bug where the lib would send the 'say' command twice
+
+v1.0
+ * Started using proper version numbers... :)
+
+20121217.1
+ * Library didn't reconnect on connection loss
+
+20121217
+ * Updated predifined commands
+ * Timeout values decreased for faster connection drop detection
+ * UTF8 support
+ * Better handling of dropped packets (client -> server)
+ * Packet receiving is now asynchronous
+ * Some other fixes and cleanups
+ * Client now accepts command line arguments
+
+20120821
+ * Hackish fix for not handling very long ban files
+
+20120717
+ * Decreased keep alive packet interval and timeout timer
+ * Changed Encoding.Default to Encoding.GetEncoding(1252) as Default is variable across systems (also makes it compatible with Linux/mono)
+
+20120706
+ * Fixed autoreconnect not working
+
+20120704
+ * License added
+
+20120628
+ * Complete BattlEye protocol implementation
